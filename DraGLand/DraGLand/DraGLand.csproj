@@ -176,6 +176,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\GameMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -250,6 +251,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Rules.cshtml" />
+    <Content Include="Views\GameMenu\Partial.cshtml" />
+    <Content Include="Views\GameMenu\Garage.cshtml" />
+    <Content Include="Views\GameMenu\Store.cshtml" />
+    <Content Include="Views\GameMenu\Race.cshtml" />
+    <Content Include="Views\GameMenu\Donate.cshtml" />
+    <Content Include="Views\GameMenu\Money.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
