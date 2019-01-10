@@ -186,6 +186,14 @@
     <Compile Include="Migrations\201901091016320_migration-1.Designer.cs">
       <DependentUpon>201901091016320_migration-1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901101013580_migration-2.cs" />
+    <Compile Include="Migrations\201901101013580_migration-2.Designer.cs">
+      <DependentUpon>201901101013580_migration-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901101119166_migration-3.cs" />
+    <Compile Include="Migrations\201901101119166_migration-3.Designer.cs">
+      <DependentUpon>201901101119166_migration-3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -251,12 +259,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Rules.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\GameMenu\Partial.cshtml" />
     <Content Include="Views\GameMenu\Garage.cshtml" />
     <Content Include="Views\GameMenu\Store.cshtml" />
     <Content Include="Views\GameMenu\Race.cshtml" />
     <Content Include="Views\GameMenu\Donate.cshtml" />
     <Content Include="Views\GameMenu\Money.cshtml" />
+=======
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
+>>>>>>> backup-10.01.2019
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,6 +289,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901091016320_migration-1.resx">
       <DependentUpon>201901091016320_migration-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101013580_migration-2.resx">
+      <DependentUpon>201901101013580_migration-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901101119166_migration-3.resx">
+      <DependentUpon>201901101119166_migration-3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
