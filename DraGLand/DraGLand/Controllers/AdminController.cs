@@ -8,7 +8,7 @@ namespace DraGLand.Controllers
 {
     public class AdminController : Controller
     {
-        [Authorize(Users = "maxsit2000@gmail.com, glazkov.hanter11@gmail.com")]
+        [Authorize(Users = "maxsit, glazkov.hanter11@gmail.com")]
         [ValidateAntiForgeryToken]
         public ActionResult Index()
         {
