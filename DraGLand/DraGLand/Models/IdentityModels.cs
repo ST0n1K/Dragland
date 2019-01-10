@@ -10,7 +10,7 @@ namespace DraGLand.Models
     public class ApplicationUser : IdentityUser
     {
         public string Login { get; set; }
-        public string PromoCode { get; set; }
+        public string InviteCode { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

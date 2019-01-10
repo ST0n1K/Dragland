@@ -13,7 +13,7 @@ namespace DraGLand.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201901101119166_migration-3"; }
+            get { return "201901101954053_migration-3"; }
         }
         
         string IMigrationMetadata.Source

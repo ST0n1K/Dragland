@@ -151,7 +151,7 @@ namespace DraGLand.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Login, Email = model.Email, Login = model.Login, PromoCode = model.PromoCode};
+                var user = new ApplicationUser { UserName = model.Login, Email = model.Email, Login = model.Login, InviteCode = model.InviteCode };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -84,8 +84,8 @@ namespace DraGLand.Models
         [Compare("Password", ErrorMessage = "Пароли не совпадают.")]
         public string ConfirmPassword { get; set; }
         
-        [Display(Name = "PromoCode")]
-        public string PromoCode { get; set; }
+        [Display(Name = "InviteCode")]
+        public string InviteCode { get; set; }
     }
 
     public class ResetPasswordViewModel
