@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DraGLand</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Гараж", "Garage", "GameMenu")</li>
+            <li>@Html.ActionLink("Автосалон", "Store", "GameMenu")</li>
+            <li>@Html.ActionLink("Заезды", "Race", "GameMenu")</li>
+            <li>@Html.ActionLink("Услуги", "Donate", "GameMenu")</li>
+            <li>@Html.ActionLink("Доход", "Money", "GameMenu")</li>
+        </ul>
+    </div>
+</body>
+</html>

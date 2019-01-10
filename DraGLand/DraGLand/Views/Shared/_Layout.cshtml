@@ -21,12 +21,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Главная", "Partial", "GameMenu")</li>
                     <li>@Html.ActionLink("Правила", "Rules", "Home")</li>
                     <li>@Html.ActionLink("О нас", "About", "Home")</li>
                     <li>@Html.ActionLink("Обратная связь", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
+               
             </div>
         </div>
     </div>
