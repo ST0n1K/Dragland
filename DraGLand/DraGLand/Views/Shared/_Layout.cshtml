@@ -17,11 +17,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("DraGLand", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("DraGLand", "Partial", "GameMenu", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Главная", "Partial", "GameMenu")</li>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                     <li>@Html.ActionLink("Правила", "Rules", "Home")</li>
                     <li>@Html.ActionLink("О нас", "About", "Home")</li>
                     <li>@Html.ActionLink("Обратная связь", "Contact", "Home")</li>
