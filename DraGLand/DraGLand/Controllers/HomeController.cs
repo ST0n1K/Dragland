@@ -27,5 +27,11 @@ namespace DraGLand.Controllers
 
             return View();
         }
+        public ActionResult Rules()
+        {
+            ViewBag.Message = "Rules page.";
+
+            return View();
+        }
     }
 }
