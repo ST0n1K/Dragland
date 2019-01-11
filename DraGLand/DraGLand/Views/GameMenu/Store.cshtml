@@ -1,11 +1,19 @@
-﻿
+﻿@model IEnumerable<DraGLand.Models.CarStore>
+
 @{
     ViewBag.Title = "Store";
 }
+
 @Html.Partial("Partial")
-<div class="col-sm-6 col-sm-offset-3">
-    <img class="store-image" src="~/images/cars/bmw_1series.png" />
-</div>
+
+@foreach (var item in Model)
+{
+    <div>@item.Price</div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <img class="store-image" src="~/images/cars/@item.Photo" />
+    </div>
+}
+
 
 
 
