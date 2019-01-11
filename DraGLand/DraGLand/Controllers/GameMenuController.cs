@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DraGLand.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace DraGLand.Controllers
 {
     public class GameMenuController : Controller
     {
+        UserContext db = new UserContext();
         // GET: GameMenu
         public ActionResult Partial()
         {
@@ -16,7 +18,9 @@ namespace DraGLand.Controllers
         }
         public ActionResult Garage()
         {
-            return View();
+            string Name;
+            Name = User.Identity.Name;
+            return View(db.Users.Find(Name));
         }
         public ActionResult Store()
         {

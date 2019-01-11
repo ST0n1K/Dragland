@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,8 +9,9 @@ namespace DraGLand.Models
 {
     public class User
     {
-        public int UserId { get; set; }
-        public string NickName { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string UserName { get; set; }
         public string QiwiCardNumber { get; set; }
         public int GameMoney { get; set; }
         public int RealMoney { get; set; }
@@ -24,7 +27,7 @@ namespace DraGLand.Models
     public class Car
     {
         public int CarId { get; set; }
-        public int? UserId { get; set; }
+        public int UserName { get; set; }
         public User User { get; set; }
         public string CarName { get; set;}
         public int Price { get; set; }

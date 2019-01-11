@@ -34,17 +34,26 @@
         <dd>
             @Html.DisplayFor(model => model.RealMoney)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InviteCode)
+        </dt>
+
         <dd>
-            <ul>
-                @foreach (var car in Model.Cars)
-                {
-                    <li>@car.CarName (@car.Stage)</li>
-                }
-            </ul>
+            @Html.DisplayFor(model => model.InviteCode)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractCharge)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserName }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
