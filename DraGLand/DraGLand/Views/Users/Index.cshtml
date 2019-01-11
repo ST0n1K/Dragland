@@ -21,6 +21,12 @@
         <th>
             @Html.DisplayNameFor(model => model.RealMoney)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InviteCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractCharge)
+        </th>
         <th></th>
     </tr>
 
@@ -36,9 +42,15 @@
             @Html.DisplayFor(modelItem => item.RealMoney)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
+            @Html.DisplayFor(modelItem => item.InviteCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractCharge)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserName })
         </td>
     </tr>
 }

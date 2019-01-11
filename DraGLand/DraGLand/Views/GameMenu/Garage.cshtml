@@ -1,7 +1,15 @@
-﻿
+﻿@model DraGLand.Models.User
 @{
-    ViewBag.Title = "Garage";
+    @ViewBag.Title
 }
+
 @Html.Partial("Partial")
+<a>@ViewBag.Name</a>
 
+<dt>
+    @Html.DisplayNameFor(model => model.GameMoney)
+</dt>
 
+<dd>
+    @Html.DisplayFor(model => model.GameMoney)
+</dd>

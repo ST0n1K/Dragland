@@ -21,13 +21,13 @@ namespace DraGLand.Controllers
         }
 
         // GET: Users/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
-                return HttpNotFound();
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Include(c => c.Cars).FirstOrDefault(c => c.UserId == id);
+            User user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace DraGLand.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,QiwiCardNumber,GameMoney,RealMoney")] User user)
+        public ActionResult Create([Bind(Include = "UserName,QiwiCardNumber,GameMoney,RealMoney,InviteCode,ContractCharge")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace DraGLand.Controllers
         }
 
         // GET: Users/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -78,7 +78,7 @@ namespace DraGLand.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,QiwiCardNumber,GameMoney,RealMoney")] User user)
+        public ActionResult Edit([Bind(Include = "UserName,QiwiCardNumber,GameMoney,RealMoney,InviteCode,ContractCharge")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace DraGLand.Controllers
         }
 
         // GET: Users/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -107,7 +107,7 @@ namespace DraGLand.Controllers
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             User user = db.Users.Find(id);
             db.Users.Remove(user);

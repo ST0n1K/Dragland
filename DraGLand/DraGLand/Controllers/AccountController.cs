@@ -158,7 +158,7 @@ namespace DraGLand.Controllers
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     User user1 = new User();
-                    user1.NickName = model.Login;
+                    user1.UserName = model.Login;
                     user1.RealMoney = 0;
                     user1.GameMoney = 1000;
                     user1.InviteCode = model.InviteCode;
