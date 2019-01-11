@@ -15,6 +15,7 @@ namespace DraGLand.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        UserContext db = new UserContext();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -149,14 +150,21 @@ namespace DraGLand.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && model.Login != model.InviteCode)
             {
                 var user = new ApplicationUser { UserName = model.Login, Email = model.Email, Login = model.Login, InviteCode = model.InviteCode };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    User user1 = new User();
+                    user1.NickName = model.Login;
+                    user1.RealMoney = 0;
+                    user1.GameMoney = 1000;
+                    user1.InviteCode = model.InviteCode;
+                    user1.ContractCharge = 0;
+                    db.Users.Add(user1);
+                    db.SaveChanges();
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

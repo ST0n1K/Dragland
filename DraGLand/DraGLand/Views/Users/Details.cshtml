@@ -1,0 +1,50 @@
+﻿@model DraGLand.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QiwiCardNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QiwiCardNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameMoney)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RealMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RealMoney)
+        </dd>
+        <dd>
+            <ul>
+                @foreach (var car in Model.Cars)
+                {
+                    <li>@car.CarName (@car.Stage)</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
