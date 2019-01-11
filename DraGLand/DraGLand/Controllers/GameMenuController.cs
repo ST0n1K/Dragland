@@ -9,7 +9,9 @@ namespace DraGLand.Controllers
 {
     public class GameMenuController : Controller
     {
-        UserContext db = new UserContext();
+        private UserContext db = new UserContext();
+        private CarStoreContext carStoreContext = new CarStoreContext();
+        
         // GET: GameMenu
         public ActionResult Partial()
         {
@@ -24,7 +26,7 @@ namespace DraGLand.Controllers
         }
         public ActionResult Store()
         {
-            return View();
+            return View(carStoreContext.CarStores.ToList());
         }
         public ActionResult Race()
         {
