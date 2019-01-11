@@ -1,0 +1,79 @@
+﻿@model IEnumerable<DraGLand.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccelerateLvl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeightLvl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineLvl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiresLvl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccelerateLvl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeightLvl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngineLvl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiresLvl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.RealMoney)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CarId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CarId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CarId })
+        </td>
+    </tr>
+}
+
+</table>
