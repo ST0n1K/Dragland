@@ -43,3 +43,12 @@ textarea {
     max-width: 100%;
     height: auto;
 }
+
+.item > button {
+    margin-left: 45%;
+    margin-top: 15%;
+}
+
+.item img {
+    margin-top: 20%;
+}
