@@ -20,9 +20,8 @@ namespace DraGLand.Controllers
         }
         public ActionResult Garage()
         {
-            string Name;
-            Name = User.Identity.Name;
-            return View(db.Users.Find(Name));
+            ViewBag.Name = User.Identity.Name;
+            return View(db.Cars.ToList());
         }
         public ActionResult Store()
         {
@@ -56,6 +55,7 @@ namespace DraGLand.Controllers
                 car.AccelerateLvl = 1;
                 car.WeightLvl = 1;
                 car.UserName = Name;
+                car.Photo = carStoreContext.CarStores.Find(id).Photo;
                 db.Cars.Add(car);
                 db.SaveChanges();
             }

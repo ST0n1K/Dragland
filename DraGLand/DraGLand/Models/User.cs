@@ -28,6 +28,7 @@ namespace DraGLand.Models
     {
         public int CarId { get; set; }
         public string UserName { get; set; }
+        public string Photo { get; set; }
         public User User { get; set; }
         public string CarName { get; set;}
         public int Price { get; set; }
