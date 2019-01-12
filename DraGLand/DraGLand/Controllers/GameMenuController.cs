@@ -40,5 +40,26 @@ namespace DraGLand.Controllers
         {
             return View();
         }
+        public RedirectResult Create(int id)
+        {
+            string Name;
+            Name = User.Identity.Name;
+            if(db.Users.Find(Name).GameMoney >= carStoreContext.CarStores.Find(id).Price)
+            {
+                db.Users.Find(Name).GameMoney -= carStoreContext.CarStores.Find(id).Price;
+                Car car = new Car();
+                car.CarName = carStoreContext.CarStores.Find(id).Name;
+                car.Price = carStoreContext.CarStores.Find(id).Price;
+                car.Stage = 1;
+                car.EngineLvl = 1;
+                car.TiresLvl = 1;
+                car.AccelerateLvl = 1;
+                car.WeightLvl = 1;
+                car.UserName = Name;
+                db.Cars.Add(car);
+                db.SaveChanges();
+            }
+            return Redirect("/GameMenu/Garage");
+        }
     }
 }

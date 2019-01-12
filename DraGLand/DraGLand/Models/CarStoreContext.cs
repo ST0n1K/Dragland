@@ -8,6 +8,8 @@ namespace DraGLand.Models
 {
     public class CarStoreContext : DbContext
     {
+        public CarStoreContext() : base("DefaultConnection")
+        { }
         public DbSet<CarStore> CarStores { get; set; }
     }
 }

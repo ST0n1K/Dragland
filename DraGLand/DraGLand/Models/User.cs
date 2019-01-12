@@ -27,7 +27,7 @@ namespace DraGLand.Models
     public class Car
     {
         public int CarId { get; set; }
-        public int UserName { get; set; }
+        public string UserName { get; set; }
         public User User { get; set; }
         public string CarName { get; set;}
         public int Price { get; set; }
