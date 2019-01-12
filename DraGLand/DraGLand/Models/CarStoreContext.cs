@@ -11,5 +11,9 @@ namespace DraGLand.Models
         public CarStoreContext() : base("DefaultConnection")
         { }
         public DbSet<CarStore> CarStores { get; set; }
+
+        public System.Data.Entity.DbSet<DraGLand.Models.Car> Cars { get; set; }
+
+        public System.Data.Entity.DbSet<DraGLand.Models.User> Users { get; set; }
     }
 }
