@@ -1,0 +1,91 @@
+﻿@model DraGLand.Models.Car
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.QiwiCardNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.QiwiCardNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccelerateLvl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccelerateLvl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeightLvl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeightLvl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineLvl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineLvl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiresLvl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiresLvl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
