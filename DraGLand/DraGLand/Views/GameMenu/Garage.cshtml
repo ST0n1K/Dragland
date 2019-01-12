@@ -8,16 +8,16 @@
     {
         <div class="col-sm-6 col-lg-4">
             <div class="card p-3">
-                <a class="mb-3">
-                    <img src="~/images/cars/@item.Photo" alt="Photo by Debra Beck" class="rounded store-image">
+                <a class="thumbnail" href="~/images/cars/@item.Photo" data-lightbox="imgGLR"><img class="img-responsive" border="0" height="300" src="~/images/cars/@item.Photo" width="400" />
+                   <div>
+                       <center><div>@item.CarName</div></center>
+                   </div>
                 </a>
                 <div class="d-flex align-items-center px-2">
                     <div class="avatar avatar-md mr-3" style="background-image: url(~/images/background/bg1.jpg)"></div>
-                    <div>
-                        <div>@item.CarName</div>
-                    </div>
+                    
                     <div class="ml-auto text-muted">
-                        <a class="icon"><i class="fe fe-eye mr-1"></i> @item.Price</a>
+                        <center><a class="icon"><i class="fe fe-eye mr-1"></i> @item.Price</a></center>
                     </div>
                 </div>
             </div>
