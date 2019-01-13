@@ -217,6 +217,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\bg.jpg" />
     <Content Include="images\background\bg.jpg" />
     <Content Include="images\background\bg1.jpg" />
     <Content Include="images\cars\audi_r8%281%29.png" />

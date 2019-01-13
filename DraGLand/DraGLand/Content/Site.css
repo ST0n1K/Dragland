@@ -56,3 +56,71 @@ textarea {
 a .icon {
     border: 1px solid black;
 }
+
+.table-bordered {
+    border-radius: 10px;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.info-tab {
+    padding-left: 1%;
+    padding-top: 0.5%;
+}
+
+a #carName {
+    display: inline-block;
+    width: 40%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #c9b9c6;
+    color: black;
+}
+
+a .table-bordered {
+    color: black;
+    background-color: #40a75b;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    height: 40px;
+    margin-top: -20.3%;
+    margin-left: 94%;
+}
+
+a .panel-car {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    position: center;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+
+.upgrade-text {
+    border: 1px solid white;
+    position: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 30%;
+    text-align: center;
+    background-color: #19ff34;
+    border-right-color: black;
+    opacity: 0.6;
+    color: black;
+}
+
+.upgrade-button {
+    border: 1px solid white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 10%;
+    text-align: center;
+    border-left-color: black;
+    background-color: forestgreen;
+}
+
