@@ -7,18 +7,22 @@
     if (@item.UserName == @ViewBag.Name)
     {
         <div class="col-sm-6 col-lg-4">
-            <div class="card p-3">
-                <a class="thumbnail" href="~/images/cars/@item.Photo" data-lightbox="imgGLR"><img class="img-responsive" border="0" height="300" src="~/images/cars/@item.Photo" width="400" />
-                   <div>
-                       <center><div>@item.CarName</div></center>
-                   </div>
-                </a>
-                <div class="d-flex align-items-center px-2">
-                    <div class="avatar avatar-md mr-3" style="background-image: url(~/images/background/bg1.jpg)"></div>
-                    
-                    <div class="ml-auto text-muted">
-                        <center><a class="icon"><i class="fe fe-eye mr-1"></i> @item.Price</a></center>
-                    </div>
+            <div class="table-bordered">
+                <div class="card p-3">
+                    <a class="mb-3">
+                        <div class="info-tab">
+                            <span class="glyphicon glyphicon-info-sign" style="color: grey;"></span>
+                        </div>
+                        <img src="~/images/cars/@item.Photo" alt="Photo by Debra Beck" class="rounded store-image" style="padding-top: 20%">
+                        <div class="panel-car">
+                            <div class="upgrade-text">
+                                @item.CarName
+                            </div>
+                            <div class="upgrade-button">
+                                <span class="glyphicon glyphicon-arrow-up" style="color: yellow"></span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
