@@ -13,6 +13,7 @@ namespace DraGLand.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string UserName { get; set; }
         public string QiwiCardNumber { get; set; }
+        public string Email { get; set; }
         public int GameMoney { get; set; }
         public int RealMoney { get; set; }
         public string InviteCode { get; set; }
