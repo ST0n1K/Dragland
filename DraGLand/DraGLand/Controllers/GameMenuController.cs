@@ -37,7 +37,9 @@ namespace DraGLand.Controllers
         }
         public ActionResult Money()
         {
-            return View();
+            string Name;
+            Name = User.Identity.Name;
+            return View(db.Users.Find(Name));
         }
         public RedirectResult Create(int id)
         {
@@ -61,5 +63,19 @@ namespace DraGLand.Controllers
             }
             return Redirect("/GameMenu/Garage");
         }
+
+        public RedirectResult Exchange(string amount, string action)
+        {
+            string Name;
+            Name = User.Identity.Name;
+            if (db.Users.Find(Name).RealMoney >= int.Parse(amount))
+            {
+                db.Users.Find(Name).RealMoney -= int.Parse(amount);
+                db.Users.Find(Name).GameMoney += int.Parse(amount) * 50;
+            }
+            db.SaveChanges();
+            return Redirect("/GameMenu/Money");
+        }
+
     }
 }

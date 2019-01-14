@@ -4,3 +4,36 @@
 }
 @Html.Partial("Partial")
 
+<h4>Мой доход</h4>
+<dl class="">
+    <dt>Псевдоним:</dt>
+    <dd>@Model.UserName</dd>
+    <dt>Игровой баланс:</dt>
+    <dd>@Model.GameMoney</dd>
+    <dt>Реальный баланс:</dt>
+    <dd>@Model.RealMoney руб.</dd>
+    <dt>Обмен на игровую валюту (курс 1 к 50):</dt>
+    @using (Html.BeginForm("Exchange", "GameMenu", FormMethod.Post))
+    {
+        <input class="form-control" type="text" name="amount" />
+        <br />
+        <button name="action" value="exchange" class="btn btn-default">Обменять</button>
+    }
+    <dt>Промо код:</dt>
+    <dd>
+        @Model.UserName
+    </dd>
+    <dt>Количество рефералов:</dt>
+    <dd>
+        @Model.ReferralsAmount
+    </dd>
+    <dt>Заработано на гонках:</dt>
+    <dd>
+        @Model.EarnedByRace
+    </dd>
+    <dt>Заработано на рефералах:</dt>
+    <dd>
+        @Model.EarnedByReferrals руб.
+    </dd>
+</dl>
+
