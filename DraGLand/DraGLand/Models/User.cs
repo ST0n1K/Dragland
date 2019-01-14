@@ -18,6 +18,9 @@ namespace DraGLand.Models
         public int RealMoney { get; set; }
         public string InviteCode { get; set; }
         public int ContractCharge { get; set; }
+        public int ReferralsAmount { get; set; }
+        public int EarnedByRace { get; set; }
+        public int EarnedByReferrals { get; set; }
         public ICollection<Car> Cars { get; set; }
         public User()
         {

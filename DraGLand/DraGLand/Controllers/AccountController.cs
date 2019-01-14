@@ -163,9 +163,16 @@ namespace DraGLand.Controllers
                     user1.GameMoney = 1000;
                     user1.InviteCode = model.InviteCode;
                     user1.ContractCharge = 0;
+                    user1.ReferralsAmount = 0;
+                    user1.EarnedByRace = 0;
+                    user1.EarnedByReferrals = 0;
                     user1.Email = model.Email;
                     db.Users.Add(user1);
                     db.SaveChanges();
+                    if (model.InviteCode != null)
+                    {
+                        db.Users.Find(model.InviteCode).ReferralsAmount++;
+                    }
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
