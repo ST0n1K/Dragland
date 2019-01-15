@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DraGLand.Models.Race>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BetType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PossibleWin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BetType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PossibleWin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RaceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RaceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RaceId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,62 @@
+﻿@model DraGLand.Models.PageViewModel
+@using DraGLand.Helpers
+@{
+    ViewBag.Title = "Play";
+}
+@Html.Partial("Partial")
+
+<div class="">
+    <div class="col-xs-8">
+        <h4>Здесь Вы можете проявить себя как стрит-рейсера. Вы готовы?! Тогда возьмите участие в готовом заезде или создайте свой:</h4>
+    </div>
+    <div class="col-xs-4">
+        <button class="btn btn-default"><a href="/Races/Create">Создать заезд</a></button>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <td>Игра #</td>
+        <td>Ставка</td>
+        <td>Тип ставки</td>
+        <td>Возможный выигрыш</td>
+        <td>Статус</td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model.Races)
+    {
+    <tr>
+        <td>@item.RaceId</td>
+        <td>@item.Bet</td>
+        @if (item.BetType == "real")
+        {
+            <td>На реальные деньги</td>
+        }
+        else
+        {
+            <td>На игровую валюту</td>
+        }
+        <td>@item.PossibleWin</td>
+        @if (item.Status == "waiting")
+        {
+            <td>В ожидании</td>
+        }
+        else
+        {
+            <td>Началась</td>
+        }
+        <td>
+            <button class="btn btn-default">
+                <a href="/Races/Start/@item.RaceId">Присоединиться</a>
+            </button>
+        </td>
+    </tr>
+    }
+</table>
+
+<br/>
+<div class="btn-group col-xs-offset-3 col-xs-9">
+    @Html.PageLinks(Model.PageInfo, x => Url.Action("Play", new { page = x }))
+</div>
+
+

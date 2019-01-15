@@ -1,0 +1,75 @@
+﻿@model DraGLand.Models.Race
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Race</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PossibleWin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PossibleWin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetNeeded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetNeeded)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RaceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
