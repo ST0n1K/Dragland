@@ -11,6 +11,7 @@ namespace DraGLand.Controllers
     {
         private UserContext db = new UserContext();
         private CarStoreContext carStoreContext = new CarStoreContext();
+        private RaceContext raceContext = new RaceContext();
         
         // GET: GameMenu
         public ActionResult Partial()
@@ -27,10 +28,16 @@ namespace DraGLand.Controllers
         {
             return View(carStoreContext.CarStores.ToList());
         }
-        public ActionResult Race()
+        public ActionResult Play(int page = 1)
         {
-            return View();
+            var races = raceContext.Races.ToList();
+            int pageSize = 3;
+            IEnumerable<Race> racesPerPages = races.Skip((page - 1) * pageSize).Take(pageSize);
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = races.Count };
+            PageViewModel pvm = new PageViewModel { PageInfo = pageInfo, Races = racesPerPages };
+            return View(pvm);
         }
+
         public ActionResult Donate()
         {
             return View();

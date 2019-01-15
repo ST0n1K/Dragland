@@ -1,0 +1,81 @@
+﻿@model DraGLand.Models.Race
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Race</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PossibleWin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PossibleWin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BetNeeded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BetNeeded)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

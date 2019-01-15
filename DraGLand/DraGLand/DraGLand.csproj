@@ -178,13 +178,16 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\CarStoresController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\GameMenuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RacesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PagingHelpers.cs" />
     <Compile Include="Migrations\201901091016320_migration-1.cs" />
     <Compile Include="Migrations\201901091016320_migration-1.Designer.cs">
       <DependentUpon>201901091016320_migration-1.cs</DependentUpon>
@@ -197,12 +200,19 @@
     <Compile Include="Migrations\201901101954053_migration-3.Designer.cs">
       <DependentUpon>201901101954053_migration-3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901142346213_migration-4.cs" />
+    <Compile Include="Migrations\201901142346213_migration-4.Designer.cs">
+      <DependentUpon>201901142346213_migration-4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CarStore.cs" />
     <Compile Include="Models\CarStoreContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PageInfo.cs" />
+    <Compile Include="Models\Race.cs" />
+    <Compile Include="Models\RaceContext.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -285,7 +295,7 @@
     <Content Include="Views\GameMenu\Partial.cshtml" />
     <Content Include="Views\GameMenu\Garage.cshtml" />
     <Content Include="Views\GameMenu\Store.cshtml" />
-    <Content Include="Views\GameMenu\Race.cshtml" />
+    <Content Include="Views\GameMenu\Play.cshtml" />
     <Content Include="Views\GameMenu\Donate.cshtml" />
     <Content Include="Views\GameMenu\Money.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
@@ -304,6 +314,12 @@
     <Content Include="Views\Cars\Details.cshtml" />
     <Content Include="Views\Cars\Edit.cshtml" />
     <Content Include="Views\Cars\Index.cshtml" />
+    <Content Include="Views\Races\Create.cshtml" />
+    <Content Include="Views\Races\Delete.cshtml" />
+    <Content Include="Views\Races\Details.cshtml" />
+    <Content Include="Views\Races\Edit.cshtml" />
+    <Content Include="Views\Races\Index.cshtml" />
+    <Content Include="Views\Game\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901101954053_migration-3.resx">
       <DependentUpon>201901101954053_migration-3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901142346213_migration-4.resx">
+      <DependentUpon>201901142346213_migration-4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
